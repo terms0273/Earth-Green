@@ -1,4 +1,4 @@
-name := "Earth-205-aiyoshizawa"
+name := "Earth-Green"
 
 version := "1.0-SNAPSHOT"
 
