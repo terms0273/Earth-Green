@@ -5,6 +5,7 @@ import models.Account;
 import dto.*;
 import Services.*;
 import filters.*;
+import models.Weather;
 import play.data.Form;
 import play.mvc.*;
 
@@ -191,6 +192,13 @@ public class UserController extends Controller{
         flash("success",userModelService.message);
         return redirect(routes.UserController.index());
     }
+
+/**
+ * weatherListに移動する
+ */
+public static Result weatherListView() {
+    return ok(weatherList.render(/**new ArrayList<Weather>()**/Weather.find.all()));
+}
     
     /**
      * ログアウト実行アクションメソッド
