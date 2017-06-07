@@ -24,6 +24,9 @@ GET     /edit                       controllers.UserController.edit()
 POST    /update                     controllers.UserController.update() 
 POST    /passwordUpdate             controllers.UserController.passwordUpdate() 
 
+#weatherList page
+GET     /weatherList            controllers.UserController.weatherListView()
+
 #logout
 GET     /logout                     controllers.UserController.logout() 
 
