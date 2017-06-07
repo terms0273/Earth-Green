@@ -1,4 +1,4 @@
-@(list: List[models.Weather])
+@(list:dto.WL)
  @import helper._
 
 @main("main"){
@@ -37,15 +37,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                   @for(weather <- list){
                    <tr>
                     <td class="weahter-td">
                       <span class="weather-label">ICON</span>
                     </td>
                    
-                        <td class="icon">@weather.icon</td> 
+                        <td class="icon">@list.iconchan</td>
                    </tr>
-                    }
                     
                     <!--
                     <td class="icon">

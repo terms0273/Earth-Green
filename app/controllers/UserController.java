@@ -196,8 +196,12 @@ public class UserController extends Controller{
 /**
  * weatherListに移動する
  */
-public static Result weatherListView() {
-    return ok(weatherList.render(/**new ArrayList<Weather>()**/Weather.find.all()));
+public static Result weatherListView() {    
+    Weather wl = Weather.find.byId(1L);
+//    List<wl> wl2 = wl.get.
+//    weatherListView[] wlv = new wlv[10]; 
+    WL wl3 = new WL(wl);
+    return ok(weatherList.render(/**new ArrayList<Weather>()**/wl3));
 }
     
     /**
