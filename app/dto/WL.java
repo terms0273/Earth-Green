@@ -5,6 +5,8 @@
  */
 package dto;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import models.Weather;
 
 /**
@@ -13,9 +15,33 @@ import models.Weather;
  */
 
 public class WL {
-    public String iconchan;
+    public String icon;
+    public String main;
+    public double temp;
+    public double temp1;    
+    public double windSpeed;
+    public int cloudAll;
+    public int pressure;
+    public int humidity;
+    public Date sunrise;
+    public Date sunset;
+    public double lat;    
+    public double lon;
+    
     public WL(){}
     public WL(Weather list){
-        iconchan = list.icon;
+        icon = list.icon;
+        main = list.main;
+        temp = list.temp;
+        temp1  = Math.round(temp);
+        windSpeed = list.windSpeed;
+        cloudAll = list.cloudAll;
+        pressure = list.pressure;
+        humidity = list.humidity;
+        sunrise = list.sunrise;
+        sunset = list.sunset;
+        lat = list.lat;
+        lon = list.lon;
     }
+    
 }

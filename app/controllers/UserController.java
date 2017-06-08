@@ -196,8 +196,9 @@ public class UserController extends Controller{
 /**
  * weatherListに移動する
  */
-public static Result weatherListView() {    
-    Weather wl = Weather.find.byId(1L);
+public static Result weatherListView() {
+    String q = "id like "+ 10;
+    Weather wl = Weather.find.where(q).findUnique();
 //    List<wl> wl2 = wl.get.
 //    weatherListView[] wlv = new wlv[10]; 
     WL wl3 = new WL(wl);
