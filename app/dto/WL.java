@@ -30,20 +30,16 @@ public class WL {
         List<String> sunrise = new ArrayList<String>();
         List<String> sunset = new ArrayList<String>();
         List<String> lat = new ArrayList<String>();
-        List<String> lon = new ArrayList<String>();
+        List<String> lon = new ArrayList<String>();        
         
             for( Weather l : list){
-                icon.add(l.icon);
+                icon.add("http://openweathermap.org/img/w/"+ l.icon +".png");
                 main.add(l.main);
                 temp.add(Math.round(l.temp) + "℃");
                 windSpeed.add(l.windSpeed + "m/s");
                 cloudAll.add(l.cloudAll + "%");
                 pressure.add(l.pressure + "hPa");
                 humidity.add(l.humidity + "%");
-    //            sunrise.add(l.sunrise);
-    //            sunset.add(l.sunset);
-    //            lat.add(l.lat);
-    //            lon.add(l.lon);            
             }
             map.put("ICON", icon);
             map.put("WEATHER", main);
@@ -52,11 +48,6 @@ public class WL {
             map.put("CLOUD COVER", cloudAll);
             map.put("PRESSURE", pressure);
             map.put("HUMIDITY", humidity);
-    //        map.put("SUNRISE", sunrise);
-    //        map.put("SUNSET", sunset);
-    //        map.put("LAT", lat);
-    //        map.put("LON", lon);
-
     }
 
     
