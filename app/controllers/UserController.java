@@ -193,12 +193,24 @@ public class UserController extends Controller{
         return redirect(routes.UserController.index());
     }
 
+    
+    
+//    public static Result weatherdt(){
+//        Form<DT> form = new Form(DT.class);
+//        return ok(weatherList.render());
+//}
 /**
  * weatherListに移動する
  */
-public static Result weatherListView() {
-    return ok(weatherList.render(/**new ArrayList<Weather>()**/Weather.find.all()));
+public static Result weatherListView(String dt) {
+//    Form<DT> form = new Form(DT.class).bindFromRequest();
+//    DT requestDt = form.get();
+    
+    String q = "dt between '" + dt + " 0:00:00' and '" + dt +" 23:59:59'";
+    List<Weather> wl = Weather.find.where(q).orderBy("dt").findList();    
+    return ok(weatherList.render(/**new ArrayList<Weather>()**/new WL(wl)));
 }
+
     
     /**
      * ログアウト実行アクションメソッド
