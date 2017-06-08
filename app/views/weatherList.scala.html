@@ -37,66 +37,17 @@
                   </tr>
                 </thead>
                 <tbody>
+                    @for((key, value) <- list.map){
                    <tr>
                     <td class="weahter-td">
-                      <span class="weather-label">ICON</span>
-                    </td>                   
-                        <td class="icon">@list.icon</td>                        
+                      <span class="weather-label">@key</span>
+                    </td>
+                    @for(v <- value){
+                        <td class="icon">@v</td>
+                    }
                    </tr>                                                     
-                  <tr>
-                    <td class="weahter-td">
-                      <span class="weather-label">WEATHER</span>
-                    </td>                    
-                    <td id="weather">@list.main</td>                    
-                  </tr>
-                  <tr>
-                    <td class="temperature-td">
-                      <span class="temperature-label">TEMPERATURE</span>
-                    </td>
-                    <td id="temperature">@list.temp1℃</td>
-                  </tr>
-                  <tr>
-                    <td class="flow-td">
-                      <span class="flow-label">AIR FLOW</span>
-                    </td>
-                    <td id="wind">@list.windSpeed  m/s</td>
-                  </tr>
-                  <tr>
-                    <td class="cloud-td">
-                      <span class="cloud-label">CLOUD COVER</span>
-                    </td>
-                    <td id="cloud">@list.cloudAll %</td>
-                  </tr>
-                  <tr>
-                    <td class="pressure-td">
-                      <span class="pressure-label">PRESSURE</span>
-                    </td>
-                    <td id="pressure">@list.pressure hPa</td>
-                  </tr>
-                  <tr>
-                    <td class="humidity-td">
-                      <span class="humidity-label">HUMIDITY</span>
-                    </td>
-                    <td id="humidity">@list.humidity %</td>
-                  </tr>
-                  <tr>
-                    <td class="sunrise-td">
-                      <span class="sunrise-label">SUNRISE</span>
-                    </td>
-                    <td id="sunrise">@list.sunrise</td>
-                  </tr>
-                  <tr>
-                    <td class="sunset-td">
-                      <span class="sunset-label">SUNSET</span>
-                    </td>
-                    <td id="sunset">@list.sunset</td>
-                  </tr>
-                  <tr>
-                    <td class="latlon-td">
-                      <span class="latlon-label">LAT LON</span>
-                    </td>
-                    <td id="latlon">LAT: @list.lat ,LON: @list.lon</td>
-                  </tr>
+                    }
+                    
                 </tbody>
               </table>
             </div>

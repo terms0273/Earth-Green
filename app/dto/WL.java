@@ -6,16 +6,26 @@
 package dto;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 import models.Weather;
-
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 /**
  *
  * @author r-takahashi
  */
-
 public class WL {
-    public String icon;
+    public WL(List<Weather> list){
+        map = new HashMap<String, List<String>>();
+        List<String> humidity = new ArrayList<String>();
+        for( Weather l : list){
+            humidity.add(l.humidity + "%");
+        }
+        map.put("HUMIDITY", humidity);
+    }
+/**    public String icon;
     public String main;
     public double temp;
     public double temp1;    
@@ -34,13 +44,13 @@ public class WL {
         main = list.main;
         temp = list.temp;
         
-        /**
-         * 小数点第2位を四捨五入する処理
-         */
+        
+        // 小数点第2位を四捨五入する処理
+        
         temp1 = temp*10;
         temp = Math.round(temp1);
         temp1 = temp/10;        
-//        temp1  = ((Math.round(temp*10))/10);
+        temp1  = ((Math.round(temp*10))/10);
 
         windSpeed = list.windSpeed;
         cloudAll = list.cloudAll;
@@ -51,5 +61,8 @@ public class WL {
         lat = list.lat;
         lon = list.lon;
     }
+**/
+    Map<String,List<String>> map ;
+    
     
 }

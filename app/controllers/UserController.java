@@ -202,14 +202,15 @@ public static Result weatherListView() {
 
     // Mapについてもう一度聞きたいです
     
+    
     String str ="2017-06-06";
-    String q = "dt like '%" + str +"%'";
-    String str1 = wl2.main;
-    Weather wl = Weather.find.where(q).findUnique();
+    String q = "dt between '2017-04-13 12:00:00' and '2017-04-13 23:00:00'";
+    String str1 = wl2.get(2).main;
+    List<Weather> wl = Weather.find.where(q).findList();
 
 //    weatherListView[] wlv = new wlv[10]; 
-    WL wl3 = new WL(wl);
-    return ok(weatherList.render(/**new ArrayList<Weather>()**/wl3));
+//    WL wl3 = new WL(wl);
+    return ok(weatherList.render(/**new ArrayList<Weather>()**/new WL(wl)));
 }
     
     /**
