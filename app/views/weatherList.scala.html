@@ -6,7 +6,12 @@
         <div id="contents">
           <div class="represent">
             <div class="uk-overflow-auto represent-contents">
+                
+                <input id="iDate" type="date">
+                <a id="date2" href="">abc</a>
+                    
               <table class="uk-table uk-table-hover">
+                
                 <thead>
                   <tr>
                     <th>ITEM</th>
@@ -39,7 +44,7 @@
                 <tbody>
                     @for((key, value) <- list.map){
                    <tr>
-                    <td class="weahter-td">
+                    <td class="weather-td">
                       <span class="weather-label">@key</span>
                     </td>
                     @for(v <- value){
@@ -57,5 +62,10 @@
           </div>
         </div>
       </div>
+        <script>
+        $("#iDate").on("change", function(e) {
+            $("#date2")[0].href="/weatherList/" +e.currentTarget.value;
+        });
+        </script>
       <script src="public/javascripts/main.js" charset="UTF-8" type="text/javascript"></script>
     }

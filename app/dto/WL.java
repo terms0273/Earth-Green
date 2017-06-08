@@ -18,13 +18,47 @@ import java.util.Map;
  */
 public class WL {
     public WL(List<Weather> list){
-        map = new HashMap<String, List<String>>();
+        map = new HashMap<String, List<String>>();        
+        List<String> icon = new ArrayList<String>();
+        List<String> main = new ArrayList<String>();
+        List<String> temp = new ArrayList<String>();
+        List<String> windSpeed = new ArrayList<String>();
+        List<String> cloudAll = new ArrayList<String>();
+        List<String> pressure = new ArrayList<String>();
         List<String> humidity = new ArrayList<String>();
-        for( Weather l : list){
-            humidity.add(l.humidity + "%");
-        }
-        map.put("HUMIDITY", humidity);
+        List<String> sunrise = new ArrayList<String>();
+        List<String> sunset = new ArrayList<String>();
+        List<String> lat = new ArrayList<String>();
+        List<String> lon = new ArrayList<String>();
+        
+            for( Weather l : list){
+                icon.add(l.icon);
+                main.add(l.main);
+                temp.add(Math.round(l.temp) + "℃");
+                windSpeed.add(l.windSpeed + "m/s");
+                cloudAll.add(l.cloudAll + "%");
+                pressure.add(l.pressure + "hPa");
+                humidity.add(l.humidity + "%");
+    //            sunrise.add(l.sunrise);
+    //            sunset.add(l.sunset);
+    //            lat.add(l.lat);
+    //            lon.add(l.lon);            
+            }
+            map.put("ICON", icon);
+            map.put("WEATHER", main);
+            map.put("TEMPERETURE", temp);
+            map.put("AIR FROW", windSpeed);
+            map.put("CLOUD COVER", cloudAll);
+            map.put("PRESSURE", pressure);
+            map.put("HUMIDITY", humidity);
+    //        map.put("SUNRISE", sunrise);
+    //        map.put("SUNSET", sunset);
+    //        map.put("LAT", lat);
+    //        map.put("LON", lon);
+
     }
+
+    
 /**    public String icon;
     public String main;
     public double temp;
@@ -62,7 +96,7 @@ public class WL {
         lon = list.lon;
     }
 **/
-    Map<String,List<String>> map ;
+    public Map<String,List<String>> map ;
     
     
 }
