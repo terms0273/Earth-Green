@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import models.Weather;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 /**
@@ -18,7 +19,7 @@ import java.util.Map;
  */
 public class WL {
     public WL(List<Weather> list){
-        map = new HashMap<String, List<String>>();        
+        map = new LinkedHashMap<String, List<String>>();        
         List<String> icon = new ArrayList<String>();
         List<String> main = new ArrayList<String>();
         List<String> temp = new ArrayList<String>();
