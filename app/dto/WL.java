@@ -33,7 +33,15 @@ public class WL {
         icon = list.icon;
         main = list.main;
         temp = list.temp;
-        temp1  = Math.round(temp);
+        
+        /**
+         * 小数点第2位を四捨五入する処理
+         */
+        temp1 = temp*10;
+        temp = Math.round(temp1);
+        temp1 = temp/10;        
+//        temp1  = ((Math.round(temp*10))/10);
+
         windSpeed = list.windSpeed;
         cloudAll = list.cloudAll;
         pressure = list.pressure;

@@ -197,9 +197,16 @@ public class UserController extends Controller{
  * weatherListに移動する
  */
 public static Result weatherListView() {
-    String q = "id like "+ 10;
+    // リストを作りたいです
+    List<Weather> wl2 = Weather.find.all();
+
+    // Mapについてもう一度聞きたいです
+    
+    String str ="2017-06-06";
+    String q = "dt like '%" + str +"%'";
+    String str1 = wl2.main;
     Weather wl = Weather.find.where(q).findUnique();
-//    List<wl> wl2 = wl.get.
+
 //    weatherListView[] wlv = new wlv[10]; 
     WL wl3 = new WL(wl);
     return ok(weatherList.render(/**new ArrayList<Weather>()**/wl3));
