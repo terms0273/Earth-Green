@@ -27,6 +27,9 @@ public class WL {
         List<ColorChange> temp = new ArrayList<ColorChange>();
         List<String> windSpeed = new ArrayList<String>();
         List<String> cloudAll = new ArrayList<String>();
+        List<String> pressure = new ArrayList<String>();
+        List<String> humidity = new ArrayList<String>();
+        List<String> DI = new ArrayList<String>();
         List<ColorChange> pressure = new ArrayList<ColorChange>();
         List<String> humidity = new ArrayList<String>();  
         
@@ -40,6 +43,13 @@ public class WL {
             cloudAll.add(l.cloudAll + "%");
             pressure.add(new ColorPressure(l.pressure));
             humidity.add(l.humidity + "%");
+            
+            // 型を変換する
+            int temp2 = Integer.parseInt(temp);
+            int humidity2 = Integer.parseInt(humidity);
+            
+            // 計算する
+            DI = 0.81 * temp2 + 0.01 + 
         }
         
         // keyとvalueを関連付ける
