@@ -12,6 +12,12 @@ package dto;
  */
 public class ColorHumidity extends ColorChange {
     public ColorHumidity(int humidity){
-        
+        if(humidity>=90){
+            super.color = "#ff0000";
+        }
+        else{
+            super.color = "#00ff00";
+        }
+        super.elem = humidity + "%";
     }
 }

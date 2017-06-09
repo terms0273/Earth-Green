@@ -12,6 +12,6 @@ package dto;
  */
 public class ColorMain extends ColorChange {
     public ColorMain(Strirng main){
-        
+        super.elem = main;
     }
 }

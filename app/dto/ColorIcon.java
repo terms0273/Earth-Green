@@ -7,12 +7,12 @@
 package dto;
 
 /**
- * セルに色を付けるための抽象クラス：変数定義
+ *
  * @author a-yamamoto
  */
-public abstract class ColorChange {
-    public String color;
-    public String elem;
-    public double temp;    
-    public int pressure;
+public class ColorIcon extends ColorChange {
+    
+    public ColorIcon(String icon){
+        super.elem = "http://openweathermap.org/img/w/"+ icon +".png";
+    }
 }

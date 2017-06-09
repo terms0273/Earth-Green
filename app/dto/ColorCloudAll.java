@@ -12,6 +12,12 @@ package dto;
  */
 public class ColorCloudAll extends ColorChange {
     public ColorCloudAll(int cloudAll){
-        
-    }
+        if(cloudAll>=80){
+            super.color = "#ff0000";
+        }
+        else{
+            super.color = "#00ff00";
+        }
+        super.elem = cloudAll + "%";
+    } 
 }

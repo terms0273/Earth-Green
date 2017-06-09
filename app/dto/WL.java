@@ -33,7 +33,7 @@ public class WL {
         
         // リストから、値を取り出し、各変数に値をいれる
         for( Weather l : list){
-            icon.add(new ColorIcon("http://openweathermap.org/img/w/"+ l.icon +".png"));
+            icon.add(new ColorIcon(l.icon));
             main.add(new ColorMain(l.main));
             temp.add(new ColorTemp(Math.round(l.temp)));
             windSpeed.add(new ColorWindSpeed(l.windSpeed));
