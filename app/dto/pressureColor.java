@@ -13,26 +13,19 @@ import java.awt.Color;
  *
  * @author a-yamamoto
  */
-public class pressureColor extends JFrame {
-    
-    public static void main(String[] args) {
-        pressureColor frame = new pressureColor();
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBounds(10, 10, 300, 200);
-        frame.setTitle("タイトル");
-        frame.setVisible(true);
+public class pressureColor {
+    public pressureColor(List<Weather> lists) {
+        
+        map = new HashMap<int, List<int>>();
+        List<int> pressure = new ArrayList<int>();
+        
+        for( Weather color : lists){
+            pressure.add(color.pressure);
+        }
+        
+        map.put("PRESSURE",pressure);
     }
     
-    pressureColor(){
-    JLabel label1 = new JLabel("COLOR BLACK");
-    label1.setOpaque(true);
-    label1.setBackground(Color.BLACK);
+    public Map<int,List<int>> map;
     
-    JPanel p = new JPanel();
-    p.add(label1);
-    
-    getContentPane().add(p);
-  }
-
 }
