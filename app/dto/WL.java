@@ -28,7 +28,8 @@ public class WL {
         List<String> windSpeed = new ArrayList<String>();
         List<String> cloudAll = new ArrayList<String>();
         List<String> pressure = new ArrayList<String>();
-        List<String> humidity = new ArrayList<String>();       
+        List<String> humidity = new ArrayList<String>();
+        List<String> DI = new ArrayList<String>();
         
         // リストから、値を取り出し、各変数に値をいれる
         for( Weather l : list){
@@ -39,6 +40,13 @@ public class WL {
             cloudAll.add(l.cloudAll + "%");
             pressure.add(l.pressure + "hPa");
             humidity.add(l.humidity + "%");
+            
+            // 型を変換する
+            int temp2 = Integer.parseInt(temp);
+            int humidity2 = Integer.parseInt(humidity);
+            
+            // 計算する
+            DI = 0.81 * temp2 + 0.01 + 
         }
         
         // keyとvalueを関連付ける
