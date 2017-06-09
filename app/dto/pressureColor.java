@@ -14,18 +14,6 @@ import java.awt.Color;
  * @author a-yamamoto
  */
 public class pressureColor {
-    public pressureColor(List<Weather> lists) {
-        
-        map = new HashMap<int, List<int>>();
-        List<int> pressure = new ArrayList<int>();
-        
-        for( Weather color : lists){
-            pressure.add(color.pressure);
-        }
-        
-        map.put("PRESSURE",pressure);
-    }
     
-    public Map<int,List<int>> map;
     
 }
