@@ -22,27 +22,24 @@ public class WL {
     public WL(List<Weather> list){
         // Mapをつくる（htmlで表示するとき、位置を固定するMap）
         map = new LinkedHashMap<String, List<String>>();     
-        List<String> icon = new ArrayList<String>();
-        List<String> main = new ArrayList<String>();
+        List<ColorChange> icon = new ArrayList<ColorChange>();
+        List<ColorChange> main = new ArrayList<ColorChange>();
         List<ColorChange> temp = new ArrayList<ColorChange>();
-        List<String> windSpeed = new ArrayList<String>();
-        List<String> cloudAll = new ArrayList<String>();
-        List<String> pressure = new ArrayList<String>();
-        List<String> humidity = new ArrayList<String>();
-        List<String> DI = new ArrayList<String>();
+        List<ColorChange> windSpeed = new ArrayList<ColorChange>();
+        List<ColorChange> cloudAll = new ArrayList<ColorChange>();
         List<ColorChange> pressure = new ArrayList<ColorChange>();
-        List<String> humidity = new ArrayList<String>();  
-        
+        List<ColorChange> humidity = new ArrayList<ColorChange>();  
+        List<ColorChange> DI = new ArrayList<ColorChange>();        
         
         // リストから、値を取り出し、各変数に値をいれる
         for( Weather l : list){
-            icon.add("http://openweathermap.org/img/w/"+ l.icon +".png");
-            main.add(l.main);
+            icon.add(new ColorIcon("http://openweathermap.org/img/w/"+ l.icon +".png"));
+            main.add(new ColorMain(l.main));
             temp.add(new ColorTemp(Math.round(l.temp)));
-            windSpeed.add(l.windSpeed + "m/s");
-            cloudAll.add(l.cloudAll + "%");
+            windSpeed.add(new ColorWindSpeed(l.windSpeed + "m/s"));
+            cloudAll.add(new ColorCloudAll(l.cloudAll + "%"));
             pressure.add(new ColorPressure(l.pressure));
-            humidity.add(l.humidity + "%");
+            humidity.add(new ColorHumidity(l.humidity + "%"));
             
             // 型を変換する
             int temp2 = Integer.parseInt(temp);
