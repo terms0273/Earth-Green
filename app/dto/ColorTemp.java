@@ -12,12 +12,7 @@ package dto;
  */
 public class ColorTemp extends ColorChange {
     public ColorTemp(double temp) {
-        if(temp>=25){
-            super.color = "#ff0000";
-        }
-        else{
-            super.color = "#00ff00";
-        }
+        
         super.elem = temp + "℃";
     }
 }

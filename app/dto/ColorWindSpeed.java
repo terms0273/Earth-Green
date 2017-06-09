@@ -12,12 +12,7 @@ package dto;
  */
 public class ColorWindSpeed extends ColorChange {
     public ColorWindSpeed(double windSpeed) {
-        if(windSpeed>=25){
-            super.color = "#ff0000";
-        }
-        else{
-            super.color = "#00ff00";
-        }
+        
         super.elem = windSpeed + "m/s";
     }
 }
