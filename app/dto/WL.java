@@ -15,13 +15,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 天気情報を、listにする
+ * 天気情報を、listにするクラス
  * @author r-takahashi
  */
 public class WL {
     public WL(List<Weather> list){
         // Mapをつくる（htmlで表示するとき、位置を固定するMap）
-        map = new LinkedHashMap<String, List<String>>();        
+        map = new LinkedHashMap<String, List<String>>();     
         List<String> icon = new ArrayList<String>();
         List<String> main = new ArrayList<String>();
         List<String> temp = new ArrayList<String>();

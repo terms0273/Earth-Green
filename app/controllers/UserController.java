@@ -193,22 +193,16 @@ public class UserController extends Controller{
         return redirect(routes.UserController.index());
     }
 
-    
-    
-//    public static Result weatherdt(){
-//        Form<DT> form = new Form(DT.class);
-//        return ok(weatherList.render());
-//}
 /**
- * weatherListに移動する
+ * weatherListに移動する処理
  */
 public static Result weatherListView(String dt) {
-//    Form<DT> form = new Form(DT.class).bindFromRequest();
-//    DT requestDt = form.get();
-    
+    // 1日分の天気情報をとってくる、qには24個の天気情報が入る
     String q = "dt between '" + dt + " 0:00:00' and '" + dt +" 23:59:59'";
-    List<Weather> wl = Weather.find.where(q).orderBy("dt").findList();    
-    return ok(weatherList.render(/**new ArrayList<Weather>()**/new WL(wl)));
+    // 日付をもとにリストを検索して、結果をwlにいれる処理
+    List<Weather> wl = Weather.find.where(q).orderBy("dt").findList();
+    // weatherListへ移動する
+    return ok(weatherList.render(new WL(wl)));
 }
 
     
