@@ -36,17 +36,10 @@ public class WL {
             icon.add(new ColorIcon(l.icon));
             main.add(new ColorMain(l.main));
             temp.add(new ColorTemp(Math.round(l.temp)));
-            windSpeed.add(new ColorWindSpeed(l.windSpeed + "m/s"));
-            cloudAll.add(new ColorCloudAll(l.cloudAll + "%"));
+            windSpeed.add(new ColorWindSpeed(l.windSpeed));
+            cloudAll.add(new ColorCloudAll(l.cloudAll));
             pressure.add(new ColorPressure(l.pressure));
-            humidity.add(new ColorHumidity(l.humidity + "%"));
-            
-            // 型を変換する
-            int temp2 = Integer.parseInt(temp);
-            int humidity2 = Integer.parseInt(humidity);
-            
-            // 計算する
-            DI = 0.81 * temp2 + 0.01 + 
+            humidity.add(new ColorHumidity(l.humidity));                      
         }
         
         // keyとvalueを関連付ける
