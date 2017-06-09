@@ -24,26 +24,35 @@ public class ColorPressure extends ColorChange {
     
     public void setColorPressure(int pressure) {
         if(pressure >= 1016){
-            super.color = "#ffbf7f";
+            super.color = "#f29900";
         }
         //1013hPaは平均の気圧の高さ
         else if(pressure >= 1013){
-            super.color = "#ffc184";
+            super.color = "#f2a200";
         }
         else if(pressure >= 1010){
-            super.color = "#ffc489";
+            super.color = "#f2aa00";
         }
         else if(pressure >= 1007){
-            super.color = "#ffc68e";
+            super.color = "#f2b200";
         }
         else if(pressure >= 1004){
-            super.color = "#ffc993";
+            super.color = "#f2ba00";
         }
         else if(pressure >= 1001) {
-            super.color = "#ffcc99";
+            super.color = "#f2c200";
+        }
+        else if(pressure >= 998) {
+            super.color = "#f2c679";
+        }
+        else if(pressure >= 997) {
+            super.color = "#f2cf91";
+        }
+        else if(pressure >= 996) {
+            super.color = "#f2d8aa";
         }
         else{
-            super.color = "#ffedcc";
+            super.color = "#f2e0c2";
         }
     }
 
