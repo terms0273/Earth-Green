@@ -28,8 +28,8 @@ public class WL {
         List<ColorChange> windSpeed = new ArrayList<ColorChange>();
         List<ColorChange> cloudAll = new ArrayList<ColorChange>();
         List<ColorChange> pressure = new ArrayList<ColorChange>();
-        List<ColorChange> humidity = new ArrayList<ColorChange>();  
-        List<ColorChange> DI = new ArrayList<ColorChange>();        
+        List<ColorChange> humidity = new ArrayList<ColorChange>();                
+        List<ColorChange> DI = new ArrayList<ColorChange>();
         
         // リストから、値を取り出し、各変数に値をいれる
         for( Weather l : list){
@@ -39,7 +39,8 @@ public class WL {
             windSpeed.add(new ColorWindSpeed(l.windSpeed));
             cloudAll.add(new ColorCloudAll(l.cloudAll));
             pressure.add(new ColorPressure(l.pressure));
-            humidity.add(new ColorHumidity(l.humidity));                      
+            humidity.add(new ColorHumidity(l.humidity));
+            DI.add(new ColorDI(l.temp, l.humidity));           
         }
         
         // keyとvalueを関連付ける
@@ -50,7 +51,8 @@ public class WL {
         map.put("CLOUD COVER", cloudAll);
         map.put("PRESSURE", pressure);
         map.put("HUMIDITY", humidity);
+        map.put("DI", DI);
     }
     // Mapを宣言する
-    public Map<String,List<ColorChange>> map ; 
+    public Map<String,List<ColorChange>> map ;     
 }
