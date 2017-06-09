@@ -11,10 +11,13 @@ package dto;
  * @author a-yamamoto
  */
 public class ColorWindSpeed extends ColorChange {
-    private static final String UNIT = "m/s";
     public ColorWindSpeed(double windSpeed) {
-        
+        if(windSpeed>=25){
+            super.color = "#ff0000";
+        }
+        else{
+            super.color = "#00ff00";
+        }
+        super.elem = windSpeed + "m/s";
     }
-    super.elem = windSpeed + UNIT;
-
 }
