@@ -6,14 +6,11 @@
 
 package dto;
 
-import javax.swing.*;
-import java.awt.Color;
-
 /**
  *
  * @author a-yamamoto
  */
-public class pressureColor {
-    
-    
+public abstract class ColorChage {
+    public String color;
+    public String elem;
 }
