@@ -13,6 +13,7 @@ package dto;
 public abstract class ColorChange {
     public String color;
     public String elem;
-    public double temp;    
-    public int pressure;
+//    public double temp;    
+//    public int pressure;
+//    public int DI;
 }
