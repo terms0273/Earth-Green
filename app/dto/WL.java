@@ -21,7 +21,7 @@ import java.util.Map;
 public class WL {
     public WL(List<Weather> list){
         // Mapをつくる（htmlで表示するとき、位置を固定するMap）
-        map = new LinkedHashMap<String, List<String>>();     
+        map = new LinkedHashMap<String, List<ColorChange>>();     
         List<ColorChange> icon = new ArrayList<ColorChange>();
         List<ColorChange> main = new ArrayList<ColorChange>();
         List<ColorChange> temp = new ArrayList<ColorChange>();
@@ -52,5 +52,5 @@ public class WL {
         map.put("HUMIDITY", humidity);
     }
     // Mapを宣言する
-    public Map<String,List<String>> map ; 
+    public Map<String,List<ColorChange>> map ; 
 }
