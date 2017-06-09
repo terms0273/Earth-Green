@@ -1,17 +1,14 @@
 @(list:dto.WL)
- @import helper._
+@import helper._
 
 @main("main"){
       <div id="main">
         <div id="contents">
           <div class="represent">
-            <div class="uk-overflow-auto represent-contents">
-                
+            <div class="uk-overflow-auto represent-contents">                
                 <input id="iDate" type="date">
-                <a id="date2" href="" uk-icon="icon: play-circle"></a>
-                    
-              <table class="uk-table uk-table-hover">
-                
+                <a id="date2" href="" uk-icon="icon: play-circle"></a>                    
+              <table class="uk-table uk-table-hover">                
                 <thead>
                   <tr>
                     <th>ITEM</th>
@@ -52,12 +49,10 @@
                             <td class="icon"><img src=@v></td>
                         }else{
                             <td class="icon">@v</td>
-                        }
-                        
+                        }                        
                     }
                    </tr>                                                     
-                    }
-                    
+                    }                    
                 </tbody>
               </table>
             </div>
