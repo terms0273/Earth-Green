@@ -10,7 +10,9 @@ package dto;
  *
  * @author a-yamamoto
  */
-public abstract class ColorChage {
+public abstract class ColorChange {
     public String color;
     public String elem;
+    public double temp;    
+    public int pressure;
 }
