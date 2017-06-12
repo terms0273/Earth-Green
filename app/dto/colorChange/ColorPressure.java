@@ -1,11 +1,8 @@
 package dto.colorChange;
 
 /**
- *
- * @author a-yamamoto
- */
-/**
  * 気圧の値の変化で色を変化させる処理
+ * @author a-yamamoto
  */
 public class ColorPressure extends ColorChange {
 
