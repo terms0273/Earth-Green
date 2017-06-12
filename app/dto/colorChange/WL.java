@@ -3,8 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dto;
+package dto.colorChange;
 
+import dto.colorChange.ColorCloudAll;
+import dto.colorChange.ColorIcon;
+import dto.colorChange.ColorWindSpeed;
+import dto.colorChange.ColorTemp;
+import dto.colorChange.ColorMain;
+import dto.colorChange.ColorPressure;
+import dto.colorChange.ColorChange;
+import dto.colorChange.ColorDI;
+import dto.colorChange.ColorHumidity;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,12 +24,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 天気情報を、listにするクラス
+ * 過去の天気情報を1時間ごとに一覧表示する
  * @author r-takahashi
  */
 public class WL {
     public WL(List<Weather> list){
-        // Mapをつくる（htmlで表示するとき、位置を固定するMap）
+        // 各変数名は、DB内の表示名に従う
         map = new LinkedHashMap<String, List<ColorChange>>();     
         List<ColorChange> icon = new ArrayList<ColorChange>();
         List<ColorChange> main = new ArrayList<ColorChange>();
@@ -31,7 +40,6 @@ public class WL {
         List<ColorChange> humidity = new ArrayList<ColorChange>();                
         List<ColorChange> DI = new ArrayList<ColorChange>();
         
-        // リストから、値を取り出し、各変数に値をいれる
         for( Weather l : list){
             icon.add(new ColorIcon(l.icon));
             main.add(new ColorMain(l.main));
@@ -42,8 +50,7 @@ public class WL {
             humidity.add(new ColorHumidity(l.humidity));
             DI.add(new ColorDI(l.temp, l.humidity));           
         }
-        
-        // keyとvalueを関連付ける
+                
         map.put("ICON", icon);
         map.put("WEATHER", main);
         map.put("TEMPERETURE", temp);
@@ -53,6 +60,5 @@ public class WL {
         map.put("HUMIDITY", humidity);
         map.put("DI", DI);
     }
-    // Mapを宣言する
     public Map<String,List<ColorChange>> map ;     
 }

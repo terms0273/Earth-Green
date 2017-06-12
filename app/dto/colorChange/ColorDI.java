@@ -1,4 +1,4 @@
-package dto;
+package dto.colorChange;
 
 /**
  * DIを計算し、配色するクラス
@@ -16,7 +16,6 @@ public class ColorDI extends ColorChange{
         setColorDI(DI);
         super.elem = DI + "";        
     }
-    
     /**
      * 不快指数を色分けして表示する
      * http://keisan.casio.jp/exec/system/1202883065　参照

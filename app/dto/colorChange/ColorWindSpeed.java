@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 
-package dto;
+package dto.colorChange;
 
 /**
  *
  * @author a-yamamoto
  */
-public class ColorIcon extends ColorChange {
-    
-    public ColorIcon(String icon){
-        super.elem = "http://openweathermap.org/img/w/"+ icon +".png";
+public class ColorWindSpeed extends ColorChange {
+    public ColorWindSpeed(double windSpeed) {
+        
+        super.elem = windSpeed + "m/s";
     }
 }

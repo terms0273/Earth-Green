@@ -4,14 +4,15 @@
  * and open the template in the editor.
  */
 
-package dto;
+package dto.colorChange;
 
 /**
- * セルに色を付けるためのスーパークラス：変数定義
+ *
  * @author a-yamamoto
  */
-public abstract class ColorChange {
-    public String color;
-    //各要素のvalue
-    public String elem;
+public class ColorCloudAll extends ColorChange {
+    public ColorCloudAll(int cloudAll){
+        
+        super.elem = cloudAll + "%";
+    } 
 }
