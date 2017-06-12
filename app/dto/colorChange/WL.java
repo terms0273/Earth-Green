@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dto.colorChange;
 
 import dto.colorChange.ColorCloudAll;
@@ -25,6 +20,7 @@ import java.util.Map;
 
 /**
  * 過去の天気情報を1時間ごとに一覧表示する
+ * DB内の情報が重複している場合、欠損している場合の対応をしていない（24時間分の表記がない日もある）
  * @author r-takahashi
  */
 public class WL {
@@ -38,8 +34,7 @@ public class WL {
         List<ColorChange> cloudAll = new ArrayList<ColorChange>();
         List<ColorChange> pressure = new ArrayList<ColorChange>();
         List<ColorChange> humidity = new ArrayList<ColorChange>();                
-        List<ColorChange> DI = new ArrayList<ColorChange>();
-        
+        List<ColorChange> DI = new ArrayList<ColorChange>();        
         for( Weather l : list){
             icon.add(new ColorIcon(l.icon));
             main.add(new ColorMain(l.main));
@@ -49,8 +44,7 @@ public class WL {
             pressure.add(new ColorPressure(l.pressure));
             humidity.add(new ColorHumidity(l.humidity));
             DI.add(new ColorDI(l.temp, l.humidity));           
-        }
-                
+        }                
         map.put("ICON", icon);
         map.put("WEATHER", main);
         map.put("TEMPERETURE", temp);
