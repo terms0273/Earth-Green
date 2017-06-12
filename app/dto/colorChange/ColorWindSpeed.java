@@ -1,4 +1,4 @@
-package dto;
+package dto.colorChange;
 
 /**
  * 風速表示の行を色分け可能とするもの。

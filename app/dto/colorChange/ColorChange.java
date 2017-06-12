@@ -1,4 +1,4 @@
-package dto;
+package dto.colorChange;
 
 /**
  * セルに色を付けるためのスーパークラス：変数定義
