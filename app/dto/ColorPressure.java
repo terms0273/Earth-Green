@@ -22,11 +22,14 @@ public class ColorPressure extends ColorChange {
         super.elem = pressure + UNIT;
     }
     
+    /**
+    * 2hPa変化すると体調に影響するという情報を見たため
+    * 平均の気圧の高さである1013hPaを基準に、3hPaずつ色を変化させている。
+    */
     public void setColorPressure(int pressure) {
         if(pressure >= 1016){
             super.color = "#f29900";
         }
-        //1013hPaは平均の気圧の高さ
         else if(pressure >= 1013){
             super.color = "#f2a200";
         }
