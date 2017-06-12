@@ -198,11 +198,10 @@ public class UserController extends Controller{
  * weatherListに移動する処理
  */
 public static Result weatherListView(String dt) {
-    // 1日分の天気情報をとってくる、qには24個の天気情報が入る
+    // 表示するテンプレートが0：00～23：00のため、betweeenで抜いた
     String q = "dt between '" + dt + " 0:00:00' and '" + dt +" 23:59:59'";
-    // 日付をもとにリストを検索して、結果をwlにいれる処理
+    // DBの日付を昇順にならべる
     List<Weather> wl = Weather.find.where(q).orderBy("dt").findList();
-    // weatherListへ移動する
     return ok(weatherList.render(new WL(wl)));
 }
 
