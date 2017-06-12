@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package dto;
 
 /**
- *
+ * 空を雲が覆っている割合を表示する行の色分け可能とするもの。
+ * 今回は色分けは行っていない。
  * @author a-yamamoto
  */
 public class ColorCloudAll extends ColorChange {

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package dto;
 
 /**
@@ -11,6 +5,7 @@ package dto;
  * @author a-yamamoto
  */
 /**
+ * 温度を表示している行の色分けを可能とするもの
  * 夏日、真夏日、猛暑日の基準になる気温ごとに色分け
  */
 public class ColorTemp extends ColorChange {

@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package dto;
 
 /**
- *
+ * 風速表示の行を色分け可能とするもの。
+ * 今回は色分けは行っていない。
  * @author a-yamamoto
  */
 public class ColorWindSpeed extends ColorChange {
