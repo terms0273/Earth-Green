@@ -2,67 +2,46 @@
 @import helper._
 
 @main("main"){
-<div id="main">
-    <div id="contents">
-        <div class="represent">
+      <div id="main">
+        <div id="contents">
+          <div class="represent">
             <div class="uk-overflow-auto represent-contents">                
                 <input id="iDate" type="date">
                 <a id="date2" href="" uk-icon="icon: play-circle"></a>
-                <table class="uk-table uk-table-hover">                
-                    <thead>
-                        <tr>
-                            <th>ITEM</th>
-                            <th>0:00</th>
-                            <th>1:00</th>
-                            <th>2:00</th>
-                            <th>3:00</th>
-                            <th>4:00</th>
-                            <th>5:00</th>
-                            <th>6:00</th>
-                            <th>7:00</th>
-                            <th>8:00</th>
-                            <th>9:00</th>
-                            <th>10:00</th>
-                            <th>11:00</th>
-                            <th>12:00</th>
-                            <th>13:00</th>
-                            <th>14:00</th>
-                            <th>15:00</th>
-                            <th>16:00</th>
-                            <th>17:00</th>
-                            <th>18:00</th>
-                            <th>19:00</th>
-                            <th>20:00</th>
-                            <th>21:00</th>
-                            <th>22:00</th>
-                            <th>23:00</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @for((key, value) <- list.map){
-                        <tr>
-                            <td class="weather-td">
-                                <span class="weather-label">@key</span>
-                            </td>
-                            @for(v <- value){
-                            @if(key == "ICON"){
+              <table class="uk-table uk-table-hover">                
+                <thead>
+                  <tr>
+                    <th>ITEM</th>
+                    @for(elem <- list.str1){
+                    <th>@elem</th>
+                    }
+                  </tr>
+                </thead>
+                <tbody>
+                    @for((key, value) <- list.map){
+                   <tr>
+                    <td class="weather-td">
+                      <span class="weather-label">@key</span>
+                    </td>
+                    @for(v <- value){
+                        @if(key == "ICON"){
                             <td class="icon"><img src="@v.elem"></td>
-                            }else{
+                        }else{
                             <td class="icon" style="background: @v.color">@v.elem</td>
-                            }                        
-                            }                    
-                        </tr>                                                     
-                        }                    
-                    </tbody>
-                </table>
+                        }                        
+                    }                    
+                   </tr>                                                     
+                    }                    
+                </tbody>
+              </table>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<script>
-    $("#iDate").on("change", function (e) {
-        $("#date2")[0].href = "/weatherList/" + e.currentTarget.value;
-    });
-</script>
-<script src="public/javascripts/main.js" charset="UTF-8" type="text/javascript"></script>
-}
+      </div>
+        <script>
+        $("#iDate").on("change", function(e) {
+            $("#date2")[0].href="/weatherList/" +e.currentTarget.value;
+        });
+        </script>
+      <script src="public/javascripts/main.js" charset="UTF-8" type="text/javascript"></script>
+    }

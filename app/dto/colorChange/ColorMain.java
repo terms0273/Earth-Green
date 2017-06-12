@@ -1,7 +1,7 @@
 package dto.colorChange;
 
 /**
- *
+ * 
  * @author a-yamamoto
  */
 public class ColorMain extends ColorChange {
