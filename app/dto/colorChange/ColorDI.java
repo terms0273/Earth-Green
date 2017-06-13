@@ -25,7 +25,7 @@ public class ColorDI extends ColorChange {
     public void setColorDI(double DI) {
         // 暑くてたまらない
         if (DI >= 85.0) {
-            super.color = "#FFB3F4";
+            super.color = "#E4B3FF";
         } // 暑くて汗が出る
         else if (DI >= 80.0) {
             super.color = "#FFB3CD";
