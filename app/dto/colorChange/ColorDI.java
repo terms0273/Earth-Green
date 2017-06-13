@@ -1,7 +1,7 @@
 package dto.colorChange;
 
 /**
- * DIを計算し、配色するクラス
+ * DIを計算し、配色するクラス　（ DI＝不快指数）
  *
  * @author r-takahashi
  */
@@ -9,10 +9,10 @@ public class ColorDI extends ColorChange {
 
     double DI = 0;
 
+    /**
+     * 不快指数を計算する 小数点第２位を切り上げて、elemにString型で代入する
+     */
     public ColorDI(double temp, int humidity) {
-        /**
-         * 不快指数を計算する 小数点第２位を切り上げて、elemにString型で代入する
-         */
         DI = Math.round((0.81 * temp + 0.01 * humidity * (0.99 * temp - 14.3) + 46.3) * 10);
         DI = DI / 10;
         setColorDI(DI);
