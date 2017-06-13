@@ -8,7 +8,8 @@
             <div class="uk-overflow-auto represent-contents">                
                 <input id="iDate" type="date">
                 <a id="date2" href="" uk-icon="icon: play-circle"></a>
-              <table class="uk-table uk-table-hover">
+                <div id ="viewDate"></div>
+                <table class="uk-table uk-table-hover">
                 <thead>
                     
                   <tr>
@@ -44,6 +45,12 @@
         $("#iDate").on("change", function(e) {
             $("#date2")[0].href="/weatherList/" +e.currentTarget.value;
         });
+        $(function() {  
+            var urlInfo = location.href.split("/");  
+            var urlInfo2 = urlInfo[urlInfo.length -1];  
+            $("#viewDate").text(urlInfo2);  
+        });
+        
         </script>
       <script src="public/javascripts/main.js" charset="UTF-8" type="text/javascript"></script>
     }
