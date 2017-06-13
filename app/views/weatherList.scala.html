@@ -46,9 +46,9 @@
             $("#date2")[0].href="/weatherList/" +e.currentTarget.value;
         });
         $(function() {  
-            var urlInfo = location.href.split("/");  
-            var urlInfo2 = urlInfo[urlInfo.length -1];  
-            $("#viewDate").text(urlInfo2);  
+            var $urlInfo = location.href.split("/");  
+            var $urlInfo2 = $urlInfo[$urlInfo.length -1];  
+            $("#viewDate").text($urlInfo2);  
         });
         
         </script>
