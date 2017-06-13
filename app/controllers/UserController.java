@@ -207,6 +207,7 @@ public class UserController extends Controller {
     /**
      * weatherListに移動する処理
      */
+    @Security.Authenticated(LoginFilter.class)
     public static Result weatherListView(String dt) {
         // 表示するテンプレートが0：00～23：00のため、betweeenで抜いた
         String q = "dt between '" + dt + " 0:00:00' and '" + dt + " 23:59:59'";
