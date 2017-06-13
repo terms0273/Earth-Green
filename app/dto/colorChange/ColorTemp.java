@@ -7,6 +7,8 @@ package dto.colorChange;
 public class ColorTemp extends ColorChange {
 
     public ColorTemp(double temp) {
+        temp = Math.round(temp * 10);
+        temp = temp / 10;
         setColorTemp(temp);
         super.elem = temp + "℃";
     }
