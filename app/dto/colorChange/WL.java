@@ -45,7 +45,7 @@ public class WL {
             str1.add(timestampFormat1.format(l.dt));
             icon.add(new ColorIcon(l.icon));
             main.add(new ColorMain(l.main));
-            temp.add(new ColorTemp(Math.round(l.temp)));
+            temp.add(new ColorTemp(l.temp));
             windSpeed.add(new ColorWindSpeed(l.windSpeed));
             cloudAll.add(new ColorCloudAll(l.cloudAll));
             pressure.add(new ColorPressure(l.pressure));
