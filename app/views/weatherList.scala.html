@@ -22,8 +22,11 @@
                     <tbody>
                         @for((key, value) <- list.map){
                         <tr>
-                            <td onclick="onColorInit('@key')" class="weather-td">
-                                <span id="@key"  class="weather-label">@key</span>
+                            <td onclick="onColorInit('@key')" class="weather-td"
+                                @if(key !="ICON" || "WEATHER"){
+                                     title="Click!" uk-tooltip="pos: bottom-right"
+                                }>
+                                <span id="@key" class="weather-label">@key</span>
                             </td>
                             @for(v <- value){
                             @if(key == "ICON"){
@@ -50,15 +53,15 @@
         var $urlInfo2 = $urlInfo[$urlInfo.length - 1];
         $("#viewDate").text("Tokyo weather : " + $urlInfo2);
     });
-    function onColorInit(elementId){
+    function onColorInit(elementId) {
         var insertClass = "initial-color";
         var targetClass = $("." + elementId);
-        if(targetClass.hasClass(insertClass)){
+        if (targetClass.hasClass(insertClass)) {
             targetClass.removeClass(insertClass);
-        }else{
+        } else {
             targetClass.addClass(insertClass);
         }
-        
+
     }
 
 </script>
