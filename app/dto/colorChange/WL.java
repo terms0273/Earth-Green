@@ -61,9 +61,9 @@ public class WL {
         map.put("TEMPERETURE", temp);
         map.put("HUMIDITY", humidity);
         map.put("DI", DI);
-        map.put("AIR FROW", windSpeed);
+        map.put("WIND SPEED", windSpeed);
         map.put("PRESSURE", pressure);
-        map.put("CLOUD COVER", cloudAll);
+        map.put("CLOUD ALL", cloudAll);
 
     }
     public Map<String, List<ColorChange>> map;
