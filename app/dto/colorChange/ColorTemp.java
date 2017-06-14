@@ -37,9 +37,9 @@ public class ColorTemp extends ColorChange {
             super.color = "#b3ffbe";
         } //氷点下
         else if (temp <= 0.0) {
-            super.color = "#b3f4ff";
+            super.color = "#b3ffe4";
         } else {
-            super.color = "#ffffff";
+            super.color = "#b3f4ff";
         }
     }
 
