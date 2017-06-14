@@ -23,8 +23,10 @@
                         @for((key, value) <- list.map){
                         <tr>
                             <td onclick="onColorInit('@key')" class="weather-td"
-                                @if(key !="ICON" || "WEATHER"){
+                                @if(!key.equals("ICON")){
+                                    @if(!key.equals("WEATHER")){
                                      title="Click!" uk-tooltip="pos: bottom-right"
+                                    }
                                 }>
                                 <span id="@key" class="weather-label">@key</span>
                             </td>
