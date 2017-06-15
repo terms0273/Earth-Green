@@ -58,7 +58,7 @@ public class WL {
         }
         map.put("ICON", icon);
         map.put("WEATHER", main);
-        map.put("TEMPERETURE", temp);
+        map.put("TEMPERATURE", temp);
         map.put("HUMIDITY", humidity);
         map.put("DI", DI);
         map.put("WIND-SPEED", windSpeed);
