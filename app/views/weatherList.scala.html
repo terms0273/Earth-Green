@@ -24,9 +24,9 @@
                         <tr>
                             <td onclick="onColorInit('@key')" class="weather-td"
                                 @if(!key.equals("ICON")){
-                                    @if(!key.equals("WEATHER")){
-                                     title="Click!" uk-tooltip="pos: bottom-right"
-                                    }
+                                @if(!key.equals("WEATHER")){
+                                title="Click!" uk-tooltip="pos: bottom-right"
+                                }
                                 }>
                                 <span id="@key" class="weather-label">@key</span>
                             </td>
