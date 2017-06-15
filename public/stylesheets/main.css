@@ -48,3 +48,6 @@ html{
 .uk-alert-primary{
     background-color: #c8fac8;
 }
+.initial-color{
+    background: initial !important;
+}

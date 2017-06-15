@@ -18,25 +18,25 @@ public class ColorPressure extends ColorChange {
      */
     public void setColorPressure(int pressure) {
         if (pressure >= 1016) {
-            super.color = "#f29900";
+            super.color = "#ffbeb3";
         } else if (pressure >= 1013) {
-            super.color = "#f2a200";
+            super.color = "#ffe4b3";
         } else if (pressure >= 1010) {
-            super.color = "#f2aa00";
+            super.color = "#f4ffb3";
         } else if (pressure >= 1007) {
-            super.color = "#f2b200";
+            super.color = "#cdffb3";
         } else if (pressure >= 1004) {
-            super.color = "#f2ba00";
+            super.color = "#b3ffbe";
         } else if (pressure >= 1001) {
-            super.color = "#f2c200";
+            super.color = "#b3ffe4";
         } else if (pressure >= 998) {
-            super.color = "#f2c679";
+            super.color = "#b3f4ff";
         } else if (pressure >= 997) {
-            super.color = "#f2cf91";
+            super.color = "#b3cdff";
         } else if (pressure >= 996) {
-            super.color = "#f2d8aa";
+            super.color = "#beb3ff";
         } else {
-            super.color = "#f2e0c2";
+            super.color = "#e4b3ff";
         }
     }
 
