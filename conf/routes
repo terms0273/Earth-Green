@@ -25,7 +25,8 @@ POST    /update                     controllers.UserController.update()
 POST    /passwordUpdate             controllers.UserController.passwordUpdate() 
 
 #weatherList page
-GET     /weatherList/:dt            controllers.UserController.weatherListView(dt:String)
+GET     /weatherList/:dt            controllers.UserController.weatherListView(dt:String)            
+GET     /weatherList/               controllers.UserController.weatherListViewNull()
 
 #logout
 GET     /logout                     controllers.UserController.logout() 
