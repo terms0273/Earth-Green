@@ -1,4 +1,39 @@
-This is your new Play application
-=====================================
+# Earth
+====
 
-This file will be packaged with your application, when using `play dist`.
+`Overview`
+Display various weather information
+
+   ## Detailed explanation
+   This is a page dedicated to members handling weather information
+   Login / logout function, user registration / deletion / editing function, weather information in Tokyo can be displayed
+
+# Earth-green
+
+`Overview`
+Site displaying weather information
+Display location is Tokyo only
+
+   ## Detailed explanation
+   Display weather information for 24 hours
+   8 types of information to display (weather icon, weather, temperature, humidity, discomfort index, wind speed, pressure, cloudy weather rate)
+   While weather information is displayed, clicking each item name in the column of ITEM displays it color-coded
+
+# Earth
+概要
+様々な天気情報を表示する
+
+  詳細説明
+  これは、天気情報を扱う会員専用ページ
+  ログイン・ログアウト機能、ユーザ登録・削除・編集機能、東京の天気情報を表示できる
+
+# Earth-green
+
+概要
+天気情報を表示するサイト
+表示場所は東京のみ
+
+  詳細説明
+  天気情報を24時間分表示する
+  表示する情報は8種類（天気アイコン、天気、気温、湿度、不快指数、風速、気圧、曇天率）
+  天気情報の表示中、ITEMの列の各項目名をクリックすると色分けして表示される
