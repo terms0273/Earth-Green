@@ -209,7 +209,7 @@ public class UserController extends Controller {
      */
     @Security.Authenticated(LoginFilter.class)
     public static Result weatherListView(String dt) {
-            // 表示するテンプレートが0：00～23：00のため、betweeenで抜いた
+            // 表示するテンプレートが0時台～23時台のため、betweeenで抜いた
             String q = "dt between '" + dt + " 0:00:00' and '" + dt + " 23:59:59'";
             // DBの日付を昇順にならべる
             List<Weather> wl = Weather.find.where(q).orderBy("dt").findList();
@@ -221,7 +221,7 @@ public class UserController extends Controller {
     @Security.Authenticated(LoginFilter.class)
     public static Result weatherListViewNull() {
         String dt = "1900-01-01";
-        // 表示するテンプレートが0：00～23：00のため、betweeenで抜いた
+        // 表示するテンプレートが0時台～23時台のため、betweeenで抜いた
         String q = "dt between '" + dt + " 0:00:00' and '" + dt + " 23:59:59'";
         // DBの日付を昇順にならべる
         List<Weather> wl = Weather.find.where(q).orderBy("dt").findList();
